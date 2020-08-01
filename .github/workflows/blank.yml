@@ -40,7 +40,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         path: ./staging 
-    - run: pwd && ls -l
+    - run: pwd && ls -l && ls ./staging
     - name: rsync deployments
       uses: burnett01/rsync-deployments@4.1
       with:
