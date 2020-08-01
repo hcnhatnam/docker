@@ -47,3 +47,4 @@ jobs:
         remote_host: 35.198.220.200
         remote_user: doleduy
         remote_key: ${{ secrets.KEY }}
+    - run: pwd && ls -l
