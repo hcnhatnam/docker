@@ -37,3 +37,13 @@ jobs:
         SERVER_IP: 35.198.220.200
         USERNAME: doleduy
         SERVER_DESTINATION: /home/doleduy/TestGit/
+    - uses: actions/checkout@v2
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@4.1
+      with:
+        switches: -avzr --delete
+        path: src/
+        remote_path: /home/doleduy/TestGit/
+        remote_host: 35.198.220.200
+        remote_user: doleduy
+        remote_key: ${{ secrets.KEY }}
