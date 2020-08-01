@@ -33,7 +33,7 @@ jobs:
         DEPLOY_KEY: ${{ secrets.KEY }}
         ARGS: ""
         SERVER_PORT: 22
-        FOLDER: "./staging/test.txt"
+        FOLDER: ${{ secrets.SOUR_FOLDER }}
         SERVER_IP: 35.198.220.200
         USERNAME: doleduy
         SERVER_DESTINATION: /home/doleduy/TestGit/
