@@ -38,12 +38,14 @@ jobs:
         USERNAME: doleduy
         SERVER_DESTINATION: /home/doleduy/TestGit/
     - uses: actions/checkout@v2
+      with:
+        path: ./staging 
     - run: pwd && ls -l
     - name: rsync deployments
       uses: burnett01/rsync-deployments@4.1
       with:
         switches: -avzr --delete
-        path: src/
+        path: ./staging 
         remote_path: /home/doleduy/TestGit/
         remote_host: 35.198.220.200
         remote_user: doleduy
